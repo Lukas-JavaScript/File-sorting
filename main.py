@@ -14,8 +14,9 @@ get_all_files(path)
 
 for file in file_paths:
     suffix = file.suffix().lower().strip(".")
+    name = file.name
     if not suffix:
         suffix = "no_suffix"  
     os.mkdir(suffix)
-    dir = path / suffix
-    sh.move(str(file), dir / file.name)
+    dir = path / suffix / name
+    sh.move(str(file), dir)
