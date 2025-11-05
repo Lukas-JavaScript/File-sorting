@@ -10,4 +10,12 @@ def get_all_files(path):
     for file in path.iterdir():
         for file in file:
             file_paths.append(os.path.join(path, file))
-    return file_paths
+get_all_files(path)
+
+for file in file_paths:
+    suffix = file.suffix().lower().strip(".")
+    if not suffix:
+        suffix = "no_suffix"  
+    os.mkdir(suffix)
+    dir = path / suffix
+    sh.move(str(file), dir / file.name)
