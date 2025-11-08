@@ -34,5 +34,5 @@ If the current working directory contains files such as file1.txt, file2.pdf, an
 
 ## 🛡️ License:
 
-This project is licensed under the [LICENSE] license - see the LICENSE file for details.
+This project is licensed under the MIT license - see the LICENSE file for details.
 
